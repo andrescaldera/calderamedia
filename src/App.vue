@@ -1,29 +1,36 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+  <main id="app">
+    <HeaderNav></HeaderNav>
     <router-view/>
-  </div>
+  </main>
 </template>
 
+<script>
+  import HeaderNav from '@/components/molecules/HeaderNav';
+  export default {
+  components: {
+    HeaderNav,
+  },
+  name: 'App',
+};
+</script>
+
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@import './assets/scss/index';
+
+* {
+  margin: 0px;
+  padding: 0px;
 }
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+body {
+  background-color: $color__bg_body;
+}
+#app {
+  font-family: $font_main;
+  font-size: $font_size;
+  font-weight: $font_weight;
+  text-align: center;
+  color: $color__text;
+  background-color: $color__bg_body;
 }
 </style>

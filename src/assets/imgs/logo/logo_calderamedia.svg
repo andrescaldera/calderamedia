@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="114px" height="82px" viewBox="0 0 114 82" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>logo_calderamedia</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="3.36488878%" y1="24.4572914%" x2="97.8621893%" y2="83.4824252%" id="linearGradient-1">
+            <stop stop-color="#EF6E4B" offset="0%"></stop>
+            <stop stop-color="#AE2E89" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#EF6E4B" offset="0%"></stop>
+            <stop stop-color="#AE2E89" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="logo_calderamedia">
+            <g id="logo_calderamedia-copy" transform="translate(8.000000, 9.000000)">
+                <text id="Caldera-Copy" fill="url(#linearGradient-1)" font-family="JuliusSansOne-Regular, Julius Sans One" font-size="19" font-weight="normal" letter-spacing="0.547008455">
+                    <tspan x="6" y="38">Caldera</tspan>
+                </text>
+                <text id="Media-Copy" fill="url(#linearGradient-1)" font-family="JuliusSansOne-Regular, Julius Sans One" font-size="31" font-weight="normal" letter-spacing="0.780926764">
+                    <tspan x="0" y="62">Media</tspan>
+                </text>
+                <path d="M85.6194947,19.0536924 L85.6194947,1.63176109 C85.6194947,1.07947634 85.1717794,0.631761086 84.6194947,0.631761086 C84.6191045,0.631761086 84.6187144,0.631761314 84.6183242,0.631761771 L65.612636,0.654006998 C65.0608086,0.654652885 64.6138064,1.1021786 64.6138064,1.65400631 L64.6138064,3.86730307 C64.6138064,4.41958782 65.0615217,4.86730307 65.6138064,4.86730307 L66.2866285,4.86730307 C66.8389133,4.86730307 67.2866285,5.31501832 67.2866285,5.86730307 L67.2866285,7.29276195 C67.2866285,7.8450467 66.8389133,8.29276195 66.2866285,8.29276195 L59.2153696,8.29276195 C58.6630848,8.29276195 58.2153696,7.8450467 58.2153696,7.29276195 L58.2153696,1.65517608 C58.2153696,1.10289133 57.7676543,0.655176079 57.2153696,0.655176079 L40.6413424,0.655176079 C40.0890576,0.655176079 39.6413424,1.10289133 39.6413424,1.65517608 L39.6413424,4.64267776 C39.6413424,5.19496251 39.1936271,5.64267776 38.6413424,5.64267776 L25.2688185,5.64267776 C24.7165338,5.64267776 24.2688185,5.19496251 24.2688185,4.64267776 L24.2688185,1.65517608 C24.2688185,1.10289133 23.8211033,0.655176079 23.2688185,0.655176079 L10.75,0.655176079 C10.1977153,0.655176079 9.75,1.10289133 9.75,1.65517608 L9.75,20.0536924" id="Path-4-Copy-4" stroke="url(#linearGradient-2)" stroke-linecap="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>
