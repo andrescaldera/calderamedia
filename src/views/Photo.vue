@@ -20,11 +20,11 @@ export default {
       title: 'photo',
     };
   },
-  async fetch ({ store, params }) {
-    let { data } = await axios.get('https://calderamedia-89c9d.firebaseio.com/galleries/banner.json')
-    cosole.log(data)
-    store.dispatch('GET_PHOTOS', data)
-  }
+  // async fetch ({ store, params }) {
+  //   let { data } = await axios.get('https://calderamedia-89c9d.firebaseio.com/galleries/banner.json')
+  //   cosole.log(data)
+  //   store.dispatch('GET_PHOTOS', data)
+  // }
 };
 </script>
 <style scoped lang="scss">
