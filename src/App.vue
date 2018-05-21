@@ -18,7 +18,7 @@
       // console.log(response.data)
       // this.results = response.data.results;
       this.$store.dispatch('GET_PHOTOS', response.data);
-    }).catch( error => { console.log(error); });
+    }).catch(error => console.log(error));
   },
   // async fetch (store) {
   //   try {
@@ -42,6 +42,7 @@
 }
 body {
   background-color: $color__bg_body;
+  overflow-x: hidden;
 }
 #app {
   font-family: $font_main;

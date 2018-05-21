@@ -46,15 +46,15 @@ export default {
   methods: {
     openNav() {
       this.isNavOpen = !this.isNavOpen;
-    }
+    },
   },
   computed: {
     classOpen() {
       return {
         open: this.isNavOpen,
-      }
-    }
-  }
+      };
+    },
+  },
 };
 </script>
 
