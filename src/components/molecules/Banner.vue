@@ -1,22 +1,39 @@
 <template>
-  <section class="section">
-    <header class="title-container" >
+  <v-parallax
+    :src="$store.state.photos.imgs[Math.floor(Math.random() * 10)].src_fullsize"
+    alt=""
+  >
+    <v-layout
+      column
+      align-center
+      justify-center
+      class="white--text title__container"
+    >
+      <!-- <img
+        class="hero-img"
+        :src="$store.state.photos.imgs[Math.floor(Math.random() * 10)].src_fullsize"
+      > -->
+      <h1 class="white--text mb-2 display-1 text-xs-center title">{{title}}</h1>
+    </v-layout>
+  </v-parallax>
+  <!-- <section class="section">
+    <header class="title__container" >
       <h1 class="title">
        {{title}}
       </h1>
     </header>
-    <div class="hero" >
+    <div class="hero" > -->
       <!-- eslint-disable-next-line -->
-      <!-- <img class="hero-img" :src="$store.state.photo.imgs[Math.floor(Math.random() * 10)].src_fullsize"  -->
-      <!-- alt=""> -->
+      <!-- <img class="hero-img" :src="$store.state.photo.imgs[Math.floor(Math.random() * 10)].src_fullsize" 
+      alt=""> -->
       <!-- eslint-disable-next-line -->
       <!-- <div class="hero-img" :style="{'background-image' : `url(${$store.state.photo.imgs[Math.floor(Math.random() * 10)].src_fullsize})`}" ></div> -->
-      <div class="hero-body">
+      <!-- <div class="hero-body">
         <div class="container container-hero-content">
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 </template>
 
 <script>
@@ -33,6 +50,11 @@ export default {
 
 <style lang="scss" scoped>
 @import '../../assets/scss/index';
+ 
+.parallax {
+  height: 50vw !important;
+  max-height: 630px !important;
+}
 
 .hero{
   position: relative;
@@ -61,7 +83,7 @@ export default {
   align-items: flex-start;
   padding: 0;
 }
-.title-container {
+.title__container {
   position: absolute;
   height: 80px;
   width: 100vw;

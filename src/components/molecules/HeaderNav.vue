@@ -1,46 +1,105 @@
 <template>
-    <header class="header">
-      <div class="navbar">
+  <div>
+    <v-navigation-drawer
+      fixed
+      right
+      temporary
+      :clipped="$vuetify.breakpoint.mdAndUp"
+      app
+      v-model="drawer"
+    >
+      <v-list dense>
+        <template v-for="item in items">
+          <v-list-tile :key="item.text">
+            <v-list-tile-content>
+                <v-btn flat :to="item.to" exact>{{item.text}}</v-btn>
+            </v-list-tile-content>
+          </v-list-tile>
+        </template>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar
+      app
+      fixed
+      :clipped-left="$vuetify.breakpoint.mdAndUp"
+    >
+      <v-toolbar-items>
         <router-link to="/" class="logo" href="">
           <img src="../../assets/imgs/logo/logo_calderamedia@2x.png" alt="Caldera Media logo">
         </router-link>
-        <nav class="nav">
-          <div class="navbar_nav" :class="classOpen">
-            <router-link class="nav_link" active-class="active" to="/" exact>Photo</router-link>
-            <router-link
-              class="nav_link"
-              active-class="active"
-              to="/galleries">galleries
-            </router-link>
-            <router-link class="nav_link" active-class="active" to="/video">video</router-link>
-            <router-link class="nav_link" active-class="active" to="/contact">contact</router-link>
-          </div>
-          <div class="menu_toggle" @click="openNav">
-            <img
-              v-if="!isNavOpen"
-              class="menu_icon_open"
-              src="../../assets/imgs/icon/ic_menu_black_24px.svg"
-              alt="Hamburguer menu">
-            <img
-              v-else
-              class="menu_icon_close"
-              src="../../assets/imgs/icon/ic_close_black_24px.svg"
-              alt="Hamburguer menu">
-          </div>
-        </nav>
-      </div>
-    </header>
+      </v-toolbar-items>
+      <v-spacer></v-spacer>
+      <v-toolbar-title class="title">
+          {{title}}
+        </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-toolbar-items class="hidden-sm-and-down">
+        <v-btn flat to="/" exact>photo</v-btn>
+        <v-btn flat to="/galleries">galleries</v-btn>
+        <v-btn flat to="/video">video</v-btn>
+        <v-btn flat to="/contact">contact</v-btn>
+      </v-toolbar-items>
+      <v-toolbar-side-icon
+        class="hidden-md-and-up"
+        @click.stop="drawer = !drawer"
+      ></v-toolbar-side-icon>
+    </v-toolbar>
+  </div>
+  <!-- <header class="header">
+    <div class="navbar">
+      <router-link to="/" class="logo" href="">
+        <img src="../../assets/imgs/logo/logo_calderamedia@2x.png" alt="Caldera Media logo">
+      </router-link>
+      <nav class="nav">
+        <div class="navbar_nav" :class="classOpen">
+          <router-link class="nav_link" active-class="active" to="/" exact>Photo</router-link>
+          <router-link
+            class="nav_link"
+            active-class="active"
+            to="/galleries">galleries
+          </router-link>
+          <router-link class="nav_link" active-class="active" to="/video">video</router-link>
+          <router-link class="nav_link" active-class="active" to="/contact">contact</router-link>
+        </div>
+        <div class="menu_toggle" @click="openNav">
+          <img
+            v-if="!isNavOpen"
+            class="menu_icon_open"
+            src="../../assets/imgs/icon/ic_menu_black_24px.svg"
+            alt="Hamburguer menu">
+          <img
+            v-else
+            class="menu_icon_close"
+            src="../../assets/imgs/icon/ic_close_black_24px.svg"
+            alt="Hamburguer menu">
+        </div>
+      </nav>
+    </div>
+  </header> -->
 </template>
 
 <script>
 
 export default {
   name: 'HeaderNav',
+  props: {
+    title: {
+      type: String,
+      required: true,
+    },
+  },
   components: {
   },
   data() {
     return {
       isNavOpen: false,
+      drawer: null,
+      items: [
+        { text: 'photo', to: '/' },
+        { text: 'galleries', to: '/galleries' },
+        { text: 'video', to: '/video' },
+        { text: 'contact', to: '/contact' },
+      ]
     };
   },
   methods: {
@@ -179,5 +238,14 @@ export default {
   &:last-child {
     margin-right: 0px;
   }
+}
+.title {
+  font-family: $font_title;
+  color: $color__text;
+  font-weight: 300;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 0px;
 }
 </style>

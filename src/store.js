@@ -9,7 +9,7 @@ export default new Vuex.Store({
   },
   actions: {
     GET_PHOTOS(state, data) {
-      console.log(data);
+      console.log('from store', data);
       state.commit('SET_PHOTOS', data);
     },
   },

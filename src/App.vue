@@ -1,7 +1,8 @@
 <template>
   <main id="app">
-    <HeaderNav></HeaderNav>
-    <router-view/>
+    <v-app>
+      <router-view/>
+    </v-app>
   </main>
 </template>
 
@@ -43,6 +44,7 @@
 body {
   background-color: $color__bg_body;
   overflow-x: hidden;
+  position: relative;
 }
 #app {
   font-family: $font_main;
